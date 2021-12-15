@@ -1,5 +1,6 @@
 import React from "react";
-import Vif from './skills/vif'
+import Vif from './skills/vIf'
+import VShow from './skills/vShow'
 
 import './App.css';
 
@@ -12,10 +13,12 @@ import {
 function App() {
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/v-if" element={<Vif />} />
-    </Routes>
-  </BrowserRouter>
+      <div className="title">我是React栗子</div>
+      <Routes>
+        <Route path="/v-if" element={<Vif />} />
+        <Route path="/v-show" element={<VShow />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
