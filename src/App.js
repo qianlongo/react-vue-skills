@@ -4,6 +4,7 @@ import VShow from './skills/vShow'
 import VFor from './skills/vFor'
 import Computed from './skills/computed'
 import Watch from './skills/watch'
+import Style from './skills/style'
 
 import './App.css';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/v-for" element={<VFor />} />
         <Route path="/computed" element={<Computed />} />
         <Route path="/watch" element={<Watch />} />
+        <Route path="/style" element={<Style />} />
       </Routes>
     </BrowserRouter>
   );
