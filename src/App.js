@@ -8,6 +8,7 @@ import Style from './skills/style'
 import Class from './skills/class'
 import Slot from './skills/slot'
 import NameSlot from './skills/nameSlot'
+import ScopeSlot from './skills/scopeSlot'
 
 import './App.css';
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/class" element={<Class />} />
           <Route path="/slot" element={<Slot />} />
           <Route path="/nameSlot" element={<NameSlot />} />
+          <Route path="/scopeSlot" element={<ScopeSlot />} />
         </Routes>
       {/* </MyContext> */}
     </BrowserRouter>

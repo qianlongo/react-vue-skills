@@ -3,7 +3,7 @@ import Dialog from './components/dialog'
 
 import './slot.css'
 
-export default function NameSlot() {
+export default function ScopeSlot() {
   const [visible, setVisible] = useState(-1)
 
   const onToggleVisible = () => {
@@ -15,8 +15,8 @@ export default function NameSlot() {
       <button onClick={ onToggleVisible }>切换dialog</button>
       <Dialog
         visible={visible}
-        title={ <div className="dialog-title">具名插槽</div> }
-        main={ <div className="slot-body">前端胖头鱼</div> }
+        title={ () => <div className="dialog-title">作用域插槽</div> }
+        main={ (userInfo) => <div className="slot-body">你好{ userInfo.name }</div> }
       >
         {/* 注意这里，会被Dialog组件的children读取并且替换掉 */}
         {/* <div className="slot-body">前端胖头鱼</div> */}
