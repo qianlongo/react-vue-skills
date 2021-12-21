@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React from "react";
 import Vif from './skills/vIf'
 import VShow from './skills/vShow'
 import VFor from './skills/vFor'
@@ -9,6 +9,9 @@ import Class from './skills/class'
 import Slot from './skills/slot'
 import NameSlot from './skills/nameSlot'
 import ScopeSlot from './skills/scopeSlot'
+import Provide from './skills/provide'
+
+import { UserInfoContext } from './context/index'
 
 import './App.css';
 
@@ -21,9 +24,9 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      {/* <MyContext
-        value={{}}
-      > */}
+      <UserInfoContext.Provider
+        value={{ userInfo: { name: '前端胖头鱼' } }}
+      >
         <div className="title">我是React栗子</div>
         <Routes>
           <Route path="/v-if" element={<Vif />} />
@@ -36,8 +39,9 @@ function App() {
           <Route path="/slot" element={<Slot />} />
           <Route path="/nameSlot" element={<NameSlot />} />
           <Route path="/scopeSlot" element={<ScopeSlot />} />
+          <Route path="/provide" element={<Provide />} />
         </Routes>
-      {/* </MyContext> */}
+      </UserInfoContext.Provider>
     </BrowserRouter>
   );
 }
