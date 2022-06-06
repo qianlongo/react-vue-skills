@@ -11,6 +11,9 @@ import NameSlot from './skills/nameSlot'
 import ScopeSlot from './skills/scopeSlot'
 import Provide from './skills/provide'
 
+import UseMountedDemo from './hooks/useMounted'
+import UseUnmountedDemo from './hooks/useUnmounted'
+
 import { UserInfoContext } from './context/index'
 
 import './App.css';
@@ -40,6 +43,8 @@ function App() {
           <Route path="/nameSlot" element={<NameSlot />} />
           <Route path="/scopeSlot" element={<ScopeSlot />} />
           <Route path="/provide" element={<Provide />} />
+          <Route path="/useMountedDemo" element={<UseMountedDemo />} />
+          <Route path="/UseUnmountedDemo" element={<UseUnmountedDemo />} />
         </Routes>
       </UserInfoContext.Provider>
     </BrowserRouter>
