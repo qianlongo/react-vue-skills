@@ -13,6 +13,9 @@ import Provide from './skills/provide'
 
 import UseMountedDemo from './hooks/useMounted'
 import UseUnmountedDemo from './hooks/useUnmounted'
+import UseUpdateEffect1 from './hooks/useUpdateEffect1'
+import UseUpdateEffect2 from './hooks/useUpdateEffect2'
+import UseSetStateDemo from './hooks/useSetState'
 
 import { UserInfoContext } from './context/index'
 
@@ -45,6 +48,9 @@ function App() {
           <Route path="/provide" element={<Provide />} />
           <Route path="/useMountedDemo" element={<UseMountedDemo />} />
           <Route path="/UseUnmountedDemo" element={<UseUnmountedDemo />} />
+          <Route path="/UseUpdateEffect1" element={<UseUpdateEffect1 />} />
+          <Route path="/UseUpdateEffect2" element={<UseUpdateEffect2 />} />
+          <Route path="/UseSetStateDemo" element={<UseSetStateDemo />} />
         </Routes>
       </UserInfoContext.Provider>
     </BrowserRouter>
